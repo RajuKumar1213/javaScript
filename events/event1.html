@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Images</title>
+    <style>
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" id="img1" alt="Nature Image 1"></li>
+        <li><img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca" id="img2" alt="Nature Image 2"></li>
+        <li><img src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c" id="img3" alt="Nature Image 3"></li>
+        <li><img src="https://images.unsplash.com/photo-1491972690050-ba117db4dc09" id="img4" alt="Nature Image 4"></li>
+    </ul>
+</body>
+
+<script>
+    // const img3 = document.querySelector("#img3");
+    // const ul = document.querySelector("ul")
+    // ul.addEventListener("click", function (e) {
+    //     console.log(("I am ul"))
+    // },false) // false mean, bubbling mode
+    // img3.addEventListener('click', function (e) {
+    //     console.log("I am boat")
+    //     e.stopPropagation(); //event will no go at the top by bubbling
+    // },false) // true mean, capturing mode
+
+    const ul = document.querySelector("ul").addEventListener("click", function (e) {
+        console.log()
+        if (e.target.tagName === "IMG") {
+            const removeIt = e.target.parentNode.remove();
+        }
+
+    })
+
+</script>
+
+</html>

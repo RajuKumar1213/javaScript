@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learing setTimeOut Asynschronous mode.</title>
+</head>
+
+<body>
+    <h1>SetInterval & clearInterval</h1>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+</body>
+
+<script>
+    const PrintInterval = function () {
+        console.log("raju", Date.now().toLocaleString())
+    }
+
+    let intervalId;
+
+    const stopit = document.querySelector("#stop");
+    const start = document.querySelector("#start");
+
+    start.addEventListener("click", function (e) {
+        intervalId = setInterval(PrintInterval, 1000)
+    })
+
+    stopit.addEventListener("click", function (e) {
+        clearInterval(intervalId)
+    })
+
+
+</script>
+
+</html>

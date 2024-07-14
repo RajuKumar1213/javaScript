@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learing setTimeOut Asynschronous mode.</title>
+</head>
+
+<body>
+    <h1>Hello bro , this is me.</h1>
+    <button>stop</button>
+</body>
+
+<script>
+
+    const changeHeading = function () {
+        document.querySelector("h1").innerHTML = "Hello , this is chai aur code."
+    }
+
+
+    const clearTime = setTimeout(changeHeading, 2000)
+
+    document.querySelector("button").addEventListener("click", function () {
+        clearTimeout(clearTime)
+    })
+</script>
+
+</html>

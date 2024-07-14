@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening Keystrock</title>
+</head>
+
+<body>
+    <h1>Listening Keystrock : Enter any key on keyboard.</h1>
+    <div>
+        <table border="2">
+            <tr>
+                <th> Key </th>
+                <th>Key Code</th>
+                <th>Code</th>
+            </tr>
+        </table>
+    </div>
+
+</body>
+<script>
+    const table = document.querySelector('table');
+    window.addEventListener("keydown", (e) => {
+        table.innerHTML += `<tr>
+              <td>${e.key === ' ' ? "space" : e.key}</td>
+              <td>${e.keyCode}</td>
+              <td>${e.code}</td>
+            </tr>`;
+    })
+</script>
+
+</html>

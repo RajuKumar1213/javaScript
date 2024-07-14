@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Appending a element using function.</title>
+</head>
+
+<body style="background-color: black; color: white;">
+    <ul>
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+
+    // THIS IS NOT THE OPTIMISED WAY BECAUSE IT TRAVERSES THE ENTIRE ENTITY.
+
+    // const appendLiChild = (langName) => {
+    //     const li = document.createElement("li");
+    //     const ul = document.querySelector("ul");
+    //     li.innerHTML= langName
+    //     ul.appendChild(li)
+
+    // }
+
+    // appendLiChild("python")
+    // appendLiChild("java")
+
+    // USING THE OPTIMISED WAY MOEHTOD 
+
+    function appendLiUsingOptMethod(langName) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector("ul").appendChild(li)
+    }
+
+    appendLiUsingOptMethod("java")
+    appendLiUsingOptMethod("python")
+</script>
+
+</html>

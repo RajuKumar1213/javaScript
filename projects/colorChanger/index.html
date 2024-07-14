@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color-Changer</title>
+</head>
+
+<style>
+    .colorbox-wrapper {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+
+        &>div {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+    }
+
+    #gray{
+        background-color: gray;
+
+        &:hover {
+            background-color: rgb(112, 111, 111);
+        }
+    }
+
+    #black {
+        background-color: black;
+
+        &:hover {
+            background-color: rgb(21, 2, 2);
+        }
+    }
+
+    #blue {
+        background-color: blue;
+
+        &:hover {
+            background-color: rgb(4, 4, 185);
+        }
+    }
+
+    #yellow{
+        background-color: yellow;
+
+        &:hover {
+            background-color: rgb(207, 207, 8);
+        }
+    }
+</style>
+
+<body>
+    <div class="colorbox-wrapper">
+        <h2>Color Scheme Switcher</h2>
+        <div class="box">
+            <div id="gray" class="button"></div>
+            <div id="black" class="button"></div>
+            <div id="blue" class="button"></div>
+            <div id="yellow" class="button"></div>
+        </div>
+        <h3>Try clicking on one of the colors above
+            to change the background color of this page!</h3>
+    </div>
+
+</body>
+
+<script src="index.js"></script>
+
+</html>
